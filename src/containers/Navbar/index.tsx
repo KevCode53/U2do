@@ -32,7 +32,7 @@ const index = () => {
             <UserInfo />
             <div className={styles.menu}>
               <button>Create</button>
-              <a href="">WorkSpaces</a>
+              <a href="/workspaces">WorkSpaces</a>
             </div>
           </div>
           </div>

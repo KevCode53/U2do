@@ -1,3 +1,5 @@
+import { workspacesModel, styleWorkspaceModel } from "models/workspaces.models"
+
 export const users = [
   {id: 1, username: "pepito", email: "pepito@example.com", avatar:"https://robohash.org/pepito"},
   {id: 2, username: "jacinto23", email: "jacinto23@example.com", avatar:"https://robohash.org/jacinto23"},
@@ -33,4 +35,61 @@ export const todos = [
   {id: 19, text: 'Saltar la cuerda', complete: false},
   {id: 20, text: 'Lavar el carro', complete: false},
   {id: 21, text: 'Limpiar la computadora', complete: false},
+]
+
+export const DefaultStyles:styleWorkspaceModel = {
+  background: 'linear-gradient(45deg, rgba(254,120,120,1) 0%, rgba(0,212,255,1) 100%)',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+}
+
+export const workspaces:workspacesModel[] = [
+  {
+    id: 0,
+    name:"Test",
+    create: "31-03-2023",
+    update: "31-03-2023",
+    create_by: 5,
+    colaborators:[3,1,7,10],
+    lists: [],
+    style: DefaultStyles
+  },
+  {
+    id: 1, name:"XD",
+    create: "29-03-2023",
+    create_by: 5,
+    colaborators:[],
+    lists: [],
+    style: {
+      backgroundColor: '#143575',
+      backgroundImage: 'url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29ya3xlbnwwfHwwfHw%3D&w=1000&q=80)',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }
+  },
+  {
+    id: 3, name:"Mods",
+    create: "16-03-2023",
+    update: "16-03-2023",
+    create_by: 5,
+    colaborators:[],
+    lists: [],
+    style: {
+      background: '#f56476',
+      backgroundImage: 'url(https://wallpaperaccess.com/full/3708811.jpg)',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+    }
+  },
+  {
+    id: 4, name:"Test",
+    create: "31-03-2023",
+    update: "31-03-2023",
+    create_by: 8,
+    colaborators:[3,1,7,10],
+    lists: [],
+    style: {
+      background: '#ccc',
+    }
+  },
 ]

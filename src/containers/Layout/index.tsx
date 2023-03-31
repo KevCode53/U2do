@@ -1,14 +1,16 @@
 
+import Navbar from '../Navbar'
+import { ReactNode } from 'react';
 
-import TodoList from '../TodoList'
-import ListHeader from '../ListHeader'
-
-const index = () => {
+const index = ({children}:{children:ReactNode}) => {
   return (
-    <main className="">
-      <div className="ghostHeader"></div>
-      <ListHeader />
-    </main>
+    <>
+      <Navbar />
+      <main className="">
+        <div className="ghostHeader"></div>
+        {children}
+      </main>
+    </>
   );
 }
 
