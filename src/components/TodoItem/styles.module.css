@@ -1,0 +1,13 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  border-radius: 3rem;
+  box-shadow: 1rem 1rem .5rem rgba(0,0,0,.1);
+  background: rgba(255,255,255,.1);
+  transition: .3s ease all;
+}
+/* .todoItem:hover {
+  background: rgba(255,255,255,.2);
+  box-shadow: 1rem 1rem .5rem rgba(0,0,0,.2);
+} */

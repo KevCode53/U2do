@@ -1,0 +1,26 @@
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2rem;
+  border-bottom: .2rem solid rgba(255,255,255,.3);
+}
+
+.userAvatar {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+.userAvatar img {
+  height: 5rem;
+  object-fit: contain;
+  border-radius: 100%;
+  width: 5rem;
+  border: solid .2rem rgba(255,255,255,1);
+}
+
+@media (min-width: 768px) {
+  .userInfoContainer {
+    display: none;
+  }
+}
