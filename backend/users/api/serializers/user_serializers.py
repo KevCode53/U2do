@@ -7,13 +7,17 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class ProfileSerializer(serializers.ModelSerializer):
     img_url = serializers.SerializerMethodField()
+    username = serializers.SerializerMethodField()
 
     class Meta:
       model = Profile
-      fields = ('image', 'phone', 'address', 'img_url')
+      fields = ('user', 'username', 'image', 'phone', 'address', 'img_url')
 
     def get_img_url(self, instance):
       return instance.preview_url()
+
+    def get_username(self, instance):
+      return instance.user.username
 
 class UserSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer(read_only=True)
